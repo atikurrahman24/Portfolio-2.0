@@ -1,4 +1,32 @@
-// (1) Resume Section Buttons Functionality
+// (1) Nav bar Buttons Functionality
+const navLinks = document.querySelectorAll('header nav a');
+const logoLink = document.querySelector('.logo');
+
+const activePage = () => {
+    navLinks.forEach(link =>{
+        link.classList.remove('active')
+    });
+}
+navLinks.forEach((link, idx) => {
+    link.addEventListener('click', () => {
+        if (!link.classList.contains('active')) {
+            activePage();
+
+            link.classList.add('active')
+        }
+    });
+});
+
+logoLink.addEventListener('click', () => {
+    if (!navLinks[0].classList.contains('active')) {
+        activePage();
+        
+        navLinks[0].classList.add('active');
+    }
+})
+
+
+// (2) Resume Section Buttons Functionality
 const resumeBtns = document.querySelectorAll('.resume-btn');
 
 resumeBtns.forEach((btn, idx) => {
@@ -20,7 +48,7 @@ resumeBtns.forEach((btn, idx) => {
 });
 
 
-// (2) project section navigation button functionality
+// (3) project section navigation button functionality
 const arrowRight = document.querySelector('.project-box .navigation .arrow-right');
 const arrowLeft = document.querySelector('.project-box .navigation .arrow-left');
 
