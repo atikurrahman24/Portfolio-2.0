@@ -353,12 +353,6 @@ section.active {
     font-size: 4.5rem;
     transition: .5s;
 }
-.services-box .icon .i {
-    font-size: 4.5rem;
-    transition: .5s;
-    color: red;
-}
-
 .services-box:hover .icon :not(a i) {
     color: var(--main-color);
 }
